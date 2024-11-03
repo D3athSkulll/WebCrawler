@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const logger = require('./logger');
+
+
 function saveData(data,outputPath)
 {
     try {
@@ -15,11 +18,11 @@ function saveData(data,outputPath)
 
         // Write data to the new file
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-        console.log(`Data saved to ${filePath}`);
+        logger.info(`Data saved to ${filePath}`);
 
     } catch (err) {
-        
-        console.error("Error saving data:", err);
+
+        logger.error("Error saving data:", err);
     }
     
 }

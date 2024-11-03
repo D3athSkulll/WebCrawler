@@ -1,14 +1,25 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
-const { logError } = require("./helper");
+
 const { url, outputPath } = require("../config/settings");
+const logger = require("./logger");
 
 async function fetchHTML(url) {
   try {
-    const { data } = await axios.get(url);
+    
+    logger.info(`Fetching URL`);
+    const res = await axios.get(url);
+    const data = res.data;
+    const dataSize = data.length;
+    
+
+    logger.info(`URL: ${url}, Data size: ${dataSize} bytes`, );
     return data;
   } catch (error) {
-    console.error("Error fetching HTML: ", error);
+    logger.error(`Error fetching HTML from URL: ${url}`, {
+      stack: error.stack,
+    });
+    throw error;
   }
 }
 
