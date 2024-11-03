@@ -1,7 +1,7 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-const { url, outputPath } = require("../config/settings");
+const {  outputPath } = require("../config/settings");
 const logger = require("./logger");
 
 async function fetchHTML(url) {
@@ -23,7 +23,7 @@ async function fetchHTML(url) {
   }
 }
 
-async function parseHTML() {
+async function parseHTML(url) {
   const html = await fetchHTML(url);
   if (!html) {
     console.error("Failed to retrieve HTML");
@@ -58,7 +58,7 @@ async function parseHTML() {
     links,
   };
 
-  console.log(data);
+  
   return data;
 }
 
