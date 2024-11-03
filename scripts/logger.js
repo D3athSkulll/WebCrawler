@@ -1,5 +1,5 @@
 const { createLogger, format, transports } = require('winston');
-
+// logger configuration for logging to console and files
 const logger = createLogger({
     level: 'info',
     format: format.combine(

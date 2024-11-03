@@ -1,7 +1,7 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-const {  outputPath } = require("../config/settings");
+const {outputPath} = require("../config/settings");
 const logger = require("./logger");
 
 async function fetchHTML(url) {

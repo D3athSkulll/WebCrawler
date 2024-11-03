@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const logger = require('./logger');
-
+// Helper function to save data to a file
 
 function saveData(data,outputPath)
 {
@@ -27,12 +27,8 @@ function saveData(data,outputPath)
     
 }
 
-function logError(error,context)
-{
-    console.error(`[${new Date().toISOString()}]Error in ${context}:`,error.message);
-}
+
 
 module.exports = {
     saveData,
-    logError
 };
