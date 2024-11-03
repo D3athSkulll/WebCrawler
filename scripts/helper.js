@@ -1,11 +1,25 @@
 const fs = require('fs');
-function saveData(data,filePath)
+const path = require('path');
+function saveData(data,outputPath)
 {
     try {
-        fs.writeFileSync(filePath,JSON.stringify(data,null,2))
-    console.log("Data saved successfully to ",filePath);
-    } catch (error) {
-        console.error("Error saving data:",error.message);
+        // Ensure the output directory exists
+        if (!fs.existsSync(outputPath)) {
+            fs.mkdirSync(outputPath, { recursive: true });
+        }
+
+        // Generate a unique filename with a timestamp
+        const timestamp = Date.now();
+        const fileName = `/results_${timestamp}.json`;
+        const filePath = path.join(outputPath, fileName);
+
+        // Write data to the new file
+        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+        console.log(`Data saved to ${filePath}`);
+
+    } catch (err) {
+        
+        console.error("Error saving data:", err);
     }
     
 }
