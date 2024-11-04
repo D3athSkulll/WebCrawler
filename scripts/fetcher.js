@@ -67,28 +67,28 @@ async function fetchPagewithPuppeteer(url) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try {
-    await page.goto(url,{waitUntil: 'networkidle2'});
+    await page.goto(url,{waitUntil: 'domcontentloaded'});
 
     const data = await page.evaluate(()=>{
       return {
-        title: document.title,
-        description: document.querySelector('meta[name="description"]')?.content,
-        images: Array.from(document.querySelectorAll('img')).map(img=>img.src),
-        links: Array.from(document.querySelectorAll('a')).map(link=>({
-          href: link.href,
-          text: link.innerText.trim()
-        })),
-      };
+            title: document.title,
+            description: document.querySelector('meta[name="description"]')?.content || '',
+            images: [...document.images].map(img => img.src),
+            links: [...document.links].map(link => link.href)
+        };
+      
     });
 
     await browser.close();
     return data;
     
   } catch (error) {
-    logger.error('Error fetching page with puppeteer:',error);
-    await browser.close();
-    throw error;
+    logger.error(`Failed to fetch data for URL: ${url}. Error: ${error.message}`);
     
+    return null;
+    
+  } finally {
+    await browser.close();
   }
   
 }

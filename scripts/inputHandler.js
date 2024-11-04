@@ -16,7 +16,7 @@ function getUserInput(question) {
 }
 
 async function promptForURL() {
-    const url = await getUserInput('Enter the URL to crawl: ');
+    const url = await getUserInput('Enter the base URL to crawl: ');
     if (!url) {
         logger.error("No URL provided. Exiting.");
         process.exit(1);
