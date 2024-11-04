@@ -1,14 +1,16 @@
 const logger = require("./logger");
-const { parseHTML } = require("./fetcher");
-const { saveData } = require("./helper");
+const { parseHTML, fetchPagewithPuppeteer } = require("./fetcher");
+const { saveData } = require("./savedata");
 const { outputPath } = require("../config/settings");
 const { isEmptyObject } = require("./utils");
 
-// Main function to crawl a URL
+
+// Main function to crawl  URL
 async function crawl(url) {
     logger.info("Crawler Initialized");
     try {
-        const data = await parseHTML(url);
+        // const data = await parseHTML(url);
+        const data = await fetchPagewithPuppeteer(url);
         if (data && !isEmptyObject(data)) {
             saveData(data, outputPath);
         } else {

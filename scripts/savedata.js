@@ -13,6 +13,7 @@ function saveData(data,outputPath)
 
         // Generate a unique filename with a timestamp
         const timestamp = Date.now();
+        console.log("timestamp",timestamp);
         const fileName = `/results_${timestamp}.json`;
         const filePath = path.join(outputPath, fileName);
 
