@@ -60,3 +60,34 @@
 2024-11-08 07:42:35 [INFO]: Crawling URL: https://github.com/D3athSkulll/yatramitra-backend at depth: 2
 2024-11-08 07:42:40 [INFO]: Data saved to data\results_1731031960597.json
 2024-11-08 07:42:40 [INFO]: Job Complete
+2024-11-08 07:59:09 [INFO]: Crawler Initialized
+2024-11-08 07:59:09 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/flightsearch.html at depth: 1
+2024-11-08 07:59:15 [INFO]: Data saved to data\results_1731032955662.json
+2024-11-08 07:59:15 [INFO]: Crawler Initialized
+2024-11-08 07:59:15 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/homepage.html at depth: 2
+2024-11-08 07:59:25 [INFO]: Data saved to data\results_1731032965348.json
+2024-11-08 07:59:25 [INFO]: Crawler Initialized
+2024-11-08 07:59:25 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/about.html at depth: 2
+2024-11-08 07:59:30 [INFO]: Data saved to data\results_1731032970579.json
+2024-11-08 07:59:30 [INFO]: Crawler Initialized
+2024-11-08 07:59:30 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/services.html at depth: 2
+2024-11-08 07:59:33 [INFO]: Data saved to data\results_1731032973886.json
+2024-11-08 07:59:33 [INFO]: Crawler Initialized
+2024-11-08 07:59:33 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/contact.html at depth: 2
+2024-11-08 07:59:37 [INFO]: Data saved to data\results_1731032977523.json
+2024-11-08 07:59:37 [INFO]: Crawler Initialized
+2024-11-08 07:59:37 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/privacypolicy.html at depth: 2
+2024-11-08 07:59:40 [INFO]: Data saved to data\results_1731032980991.json
+2024-11-08 07:59:40 [INFO]: Crawler Initialized
+2024-11-08 07:59:40 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/termsAndConditions.html at depth: 2
+2024-11-08 07:59:44 [INFO]: Data saved to data\results_1731032984671.json
+2024-11-08 07:59:44 [INFO]: Crawler Initialized
+2024-11-08 07:59:44 [INFO]: Crawling URL: https://yatramitra.vercel.app/views/faq.html at depth: 2
+2024-11-08 07:59:48 [INFO]: Data saved to data\results_1731032988022.json
+2024-11-08 07:59:48 [INFO]: Crawler Initialized
+2024-11-08 07:59:48 [INFO]: Crawling URL: https://github.com/D3athSkulll/yatramitra-frontend at depth: 2
+2024-11-08 07:59:53 [INFO]: Data saved to data\results_1731032993571.json
+2024-11-08 07:59:53 [INFO]: Crawler Initialized
+2024-11-08 07:59:53 [INFO]: Crawling URL: https://github.com/D3athSkulll/yatramitra-backend at depth: 2
+2024-11-08 07:59:59 [INFO]: Data saved to data\results_1731032999106.json
+2024-11-08 07:59:59 [INFO]: Job Complete

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const archiver = require('archiver');
+const logger = require('./logger');
 
 function archiveDataFolder() {
     const dataFolder = path.join(__dirname, '../data');
@@ -8,7 +9,7 @@ function archiveDataFolder() {
 
     // Ensure the output directory exists
     if (!fs.existsSync(dataFolder)) {
-        console.error("Data folder does not exist.");
+        logger.error("Data folder does not exist.");
         return;
     }
 
