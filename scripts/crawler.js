@@ -6,6 +6,9 @@ const { isEmptyObject, getLinks, isValidUrl } = require("./utils");
 const {} = require("../config/settings");
 const { addToTodoLinks, moveToDoneLinks } = require('./savedata');
 
+function getUniqueLinks(links) {
+    return Array.from(new Set(links)); // Converts to a Set and back to an array
+}
 // Main function to crawl  URL
 async function crawl(url,depth = 1 , maxDepth = 3) {
     if(depth>maxDepth) {
@@ -23,7 +26,8 @@ async function crawl(url,depth = 1 , maxDepth = 3) {
         const data = await fetchPagewithPuppeteer(url);
         if (data && !isEmptyObject(data)) {
             saveData(data, outputPath);
-            const links = getLinks(data.links);
+            const links = getUniqueLinks(data.links);
+            
 
             for (const link of links)
             {

@@ -1,0 +1,10 @@
+https://yatramitra.vercel.app/views/homepage.html
+https://yatramitra.vercel.app/views/about.html
+https://yatramitra.vercel.app/views/services.html
+https://yatramitra.vercel.app/views/contact.html
+https://yatramitra.vercel.app/views/privacypolicy.html
+https://yatramitra.vercel.app/views/termsAndConditions.html
+https://yatramitra.vercel.app/views/faq.html
+https://github.com/D3athSkulll/yatramitra-frontend
+https://github.com/D3athSkulll/yatramitra-backend
+https://yatramitra.vercel.app/views/flightsearch.html
