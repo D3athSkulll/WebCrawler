@@ -15,7 +15,7 @@ A JavaScript-based CLI web crawler that takes a base URL as input, crawls the we
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/D3athSkulll/WebCrawler
    cd <repository-folder>
    ```
 
