@@ -1,45 +1,57 @@
-# JavaScript Web Crawler
+# Node.js CLI Web Crawler
 
-This project is a modularized JavaScript web crawler that fetches, parses, and stores information from a specified URL. The crawler extracts titles, descriptions, paragraphs, images, and product information, saving the results in a structured JSON format.
+A JavaScript-based CLI web crawler that takes a base URL as input, crawls the website for specified data, and saves the results in JSON format. The crawler captures the page title, description, image links , and links found on each page, and supports depth-level searching up to two levels. All results are saved in a zip archive for easy access and storage.
 
-## Features
+## Technologies Used
 
-- **Environment Variables**: The URL and path are stored in a `.env` file for easy configuration.
-- **Data Parsing**: Extracts key elements (titles, descriptions, paragraphs, images, product info) from the HTML of the specified webpage.
-- **JSON Output**: Stores the parsed data in `results.json` for further processing or analysis.
+- **JavaScript**: Core language for scripting and logic.
+- **Puppeteer**: Handles URL data fetching and DOM manipulation.
+- **Winston**: Provides robust logging functionality.
+- **Archiver**: Creates zip archives of the results.
+- **fs & path**: Native Node.js modules for file system and path operations.
 
 ## Installation
 
-1. Clone this repository:
+1. Clone the repository:
+
    ```bash
-   git clone <repository_url>
-   cd <repository_name>
+   git clone <repository-url>
+   cd <repository-folder>
    ```
 
-2. Install dependencies:
+2. Install the dependencies:
+
    ```bash
    npm install
    ```
 
-3. Set up the `.env` file with the target URL and path:
-   ```env
-   URL=<your_target_url>
-   PATH=<your_desired_path>
-   ```
-
 ## Usage
 
-Run the crawler:
+To start the web crawler:
+
 ```bash
 node index.js
 ```
 
-The extracted data will be saved in `results.json`.
+1. The crawler will prompt you to enter a base URL.
+2. It will then process the base URL, fetching the title, description, images, and links from the page and any linked pages up to a depth of 2 (this depth level can be adjusted in the code).
+3. The results are saved as JSON files in the `data` folder, which are then archived into `results.zip`.
 
-## Dependencies
+### Changing Depth Level
 
-This project uses libraries like `dotenv` for environment variable management and other packages relevant for web scraping and data handling.
+The crawler currently supports depth-level searching up to 2 levels. To change this depth, adjust the appropriate depth setting in `crawler.js` (or the relevant file).
 
----
+## Logging
 
-This README should provide users with a quick overview and clear instructions for setup and execution!
+Logs are saved in the `logs` folder:
+
+- `combined.log`: Contains general logs.
+- `error.log`: Logs errors encountered during execution.
+- `todo_links.txt` and `done_links.txt`: Track URLs that are yet to be processed and those that have been crawled.
+
+## Output
+
+- JSON data for each page is stored in the `data` folder.
+- All JSON files are archived into `results.zip` for easy access and transfer.
+
+This `README.md` should give users a clear understanding of the project, its setup, and how to use it. Let me know if there are any other details you’d like to include!
