@@ -1,3 +1,11 @@
+## DAA COURSE PROJECT - GROUP 20
+
+- **VISHWAJIT SARAK PATIL -> (2023IMT-071)**
+- **SHIVAM DEOLANKAR  -> (2023IMT-073)**
+- **SOHAM PATIL  -> (2023IMT-080)**
+- **ADITYA VARSHNEY  -> (2023IMG-060)**
+- **KARTIKEY AWASTHI  -> (2023IMG-061)**
+
 # Node.js CLI Web Crawler
 
 A JavaScript-based CLI web crawler that takes a base URL as input, crawls the website for specified data, and saves the results in JSON format. The crawler captures the page title, description, image links , and links found on each page, and supports depth-level searching up to two levels. All results are saved in a zip archive for easy access and storage.
